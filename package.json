@@ -1,0 +1,32 @@
+{
+  "name": "playwright_typescript_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.5.5",
+    "playwright": "^1.47.1",
+    "typescript": "^5.6.2"
+  },
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "yarn": "^1.22.22"
+  },
+  "husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+  }
+}
