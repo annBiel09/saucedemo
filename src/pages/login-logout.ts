@@ -8,6 +8,10 @@ export class LoginPage {
     }
 
     // Locators
+    loginPanelLocator(): Locator {
+        return this.page.locator('[data-test="login-container"]');
+    }
+
     usernameInputLocator(): Locator {
         return this.page.locator('[data-test="username"]');
     }
@@ -18,6 +22,14 @@ export class LoginPage {
 
     loginButtonLocator(): Locator {
         return this.page.locator('[data-test="login-button"]');
+    }
+
+    logoutButtonLocator(): Locator {
+        return this.page.locator('[data-test="logout-sidebar-link"]');
+    } 
+
+    openSideBarLocator(): Locator {
+        return this.page.locator('[id="react-burger-menu-btn"]');
     }
 
     // Functions
@@ -36,11 +48,26 @@ export class LoginPage {
         await this.loginButtonLocator().click();
     }
 
+    async openSideBar():Promise<void> {
+        await expect(this.openSideBarLocator()).toBeEnabled();
+        await this.openSideBarLocator().click();
+    }
+
+    async clickLogoutButton(): Promise<void> {
+        await expect(this.logoutButtonLocator()).toBeEnabled();
+        await this.logoutButtonLocator().click();
+    } 
+
     // Methods
     async login(username: string, password: string): Promise<void> {
         await this.page.goto('');
         await this.fillUsername(username);
         await this.fillPassword(password);
         await this.clickLoginButton();
+    }
+
+    async logout(): Promise<void> {
+        await this.openSideBar();
+        await this.clickLogoutButton();
     }
 }

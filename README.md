@@ -13,4 +13,8 @@ To clone the repository, use the following command:
 
 ```bash
 git clone https://github.com/annBiel09/saucedemo.git
+```
+
+## Installing dependencies
 cd saucedemo
+yarn install

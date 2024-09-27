@@ -1,5 +1,4 @@
 import { Locator, Page, expect } from '@playwright/test';
-import { URLs } from '../config/urls';
 
 export class InventoryPage {
     readonly page: Page;

@@ -1,6 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 import { CommonPage } from '../utils/common-elements';
-import { LoginPage } from '../pages/login';
+import { LoginPage } from '../pages/login-logout';
 import { UsersConfig } from '../config/users';
 import { InventoryPage } from '../pages/inventory';
 import { CartPage } from '../pages/cart';

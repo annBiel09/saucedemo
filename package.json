@@ -3,29 +3,29 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",           
+    "postinstall": "playwright install"   
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@types/node": "^22.5.5",
     "playwright": "^1.47.1",
-    "typescript": "^5.6.2"
-  },
-  "description": "",
-  "devDependencies": {
+    "typescript": "^5.6.2",
     "@playwright/test": "^1.47.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "yarn": "^1.22.22"
   },
+  "description": "",
   "husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
-  }
-},
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
   }
