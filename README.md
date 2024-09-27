@@ -16,5 +16,5 @@ git clone https://github.com/annBiel09/saucedemo.git
 ```
 
 ## Installing dependencies
-cd saucedemo
-yarn install
+- cd saucedemo
+- yarn install
